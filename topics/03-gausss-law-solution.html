@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>gauss's law</title>
+	<link rel="icon" href="../favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="../style.css">
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js">
+  </script>
+  <!-- the below three lines are a fix to get HTML5 semantic elements working in old versions of Internet Explorer-->
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+	<h1>solutions</h1>
+	<p>for common problems in introductory physics</p>
+	<main>
+		<aside>
+			<a href="../index.html">
+				home
+			</a>
+			<a href="01-inclined-plane.html">
+				inclined plane
+			</a>
+			<a href="02-pendulum.html">
+				pendulum
+			</a>
+			<a href="03-gausss-law.html" class="highlighted">
+				gauss's law
+			</a>
+			<a href="04-circuit-analysis.html">
+				circuit analysis
+			</a>
+			<a href="05-two-lenses.html">
+				two lenses
+			</a>
+		</aside>		
+		<article>
+			<h2>
+				gauss's law
+			</h2>
+			<h3>
+				problem
+			</h3>
+			<p>
+				A conducting spherical shell of radius \(a\) and charge \(3Q\) is concentrically centered
+				within a thin spherical shell of inner radius \(b\), outer radius \(c\), and charge of \(-2Q\).
+				This is depicted in the figure below.
+				Calculate the electric field in regions \(I\), \(II\), \(III\), and \(IV\).
+				Also, determine the charge distribution on the shell when there is electrostatic equilibrium.
+			</p>
+			<figure>
+				<img
+					src="../images/gausss-setup.svg"
+					alt="a conducting sphere of charge 3Q is concentric inside a conducting spherical shell of charge -2Q"
+					title="a conducting sphere of charge 3Q is concentric inside a conducting spherical shell of charge -2Q"
+				>
+			</figure>
+			<h3 id="solution">
+				solution
+			</h3>
+			<p>
+				To solve this problem, the most important equation is Gauss's law.
+				Gauss's law is the following.
+			</p>
+			<p>
+				\begin{equation}\oint\vec{E}\cdot d\vec{A}=\frac{q_{enc}}{\epsilon_0}\tag{1}\end{equation}
+			</p>
+			<p>
+				\(\vec{E}\) is the electric field vector due to a charge distribution
+				within a guassian surface of of area \(A\).
+				\(d\vec{A}\) is an infinitesimal element of the surface area of the gaussian surface.
+				\(q_{enc}\) is the amount of charge enclosed in the gaussian surface.
+				\(\epsilon_0\) is the permittivity of free space.
+				This is an integral equation.
+				But this problem doesn't require a lot of advanced math to solve.
+				To demonstrate this let's calculate the electric field in region \(I\).
+				We will take a lot of advantage of the spherical symmetry of this problem.
+				Let's use a spherical coordinate system that starts at the center of the concentric spheres.
+				Any point where we want to calculate the electric field is described by a vector, \(\vec{r}\),
+				that is a distance \(r\) from the center of the coordinate system.
+			</p>
+			<p>
+				Let's calculate the electric field in region \(I\).
+				Region \(I\) is where \(r\) is less than \(a\).
+				The electric field produced by a point or spherical charge points outward in all directions.
+				This means that the electric field is always perpendicular to a spherical gaussian surface
+				that encompasses the charge distribution.
+				As a result, the dot product of the electric field and the surface area element, \(\vec{E}\cdot d\vec{A}\),
+				is the magnitude of the electric field at that point, \(E\),
+				multiplied the size of the surface area element at that point, \(dA\).
+				As a result of this, the left hand side of equation 1 becomes
+			</p>
+			<p>
+				\begin{equation}\oint\vec{E}\cdot d\vec{A}=E\oint dA\tag{2}\end{equation}
+			</p>
+			<p>
+				When using Gauss's law, you should choose a gaussian surface
+				where the surface area can be easily calculated.
+				That way the integral on the left hand side of equation 2 can be easily evaluated.
+				Throughout this entire solution,
+				the gaussian surface will always be a sphere.
+				\(\oint dA\) will always equal the surface area of the sphere of radius \(r\) which is \(4\pi r^2\).
+			</p>
+			<p>
+				In electrostatic equilibrium,
+				the charge on a conductor always resides on the surface.
+				So the \(3Q\) on the inner spere is all located on its surface.
+				In region \(I\),
+				there is no charge enclosed since \(r&lt;a\), so \(q_{enc}=0\). 
+				Using Gauss's law we have
+			</p>
+			<p>
+				\begin{equation}\oint\vec{E}\cdot d\vec{A}=\frac{q_{enc}}{\epsilon_0}\tag{1}\end{equation}
+				\begin{equation}E4\pi r^2=\frac{0}{\epsilon_0}\tag{3}\end{equation}
+				\begin{equation}E=0,~r&lt;a\tag{4}\end{equation}
+			</p>
+			<p>
+				in region \(I\).
+			</p>
+			<p>
+				In region \(II\), all of the charge on the inner sphere is enclosed so \(q_{enc}=3Q\).
+				\(r\) is the distance from the center of the concentric spheres.
+				Our answer for the electric field will be in terms of this radius, \(r\).
+				We can use Gauss's law in the following way.				
+			</p>
+			<p>
+				\begin{equation}\oint\vec{E}\cdot d\vec{A}=\frac{q_{enc}}{\epsilon_0}\tag{5}\end{equation}
+				\begin{equation}E4\pi r^2=\frac{3Q}{\epsilon_0}\tag{5}\end{equation}
+				\begin{equation}E=\frac{3Q}{4\pi\epsilon_0 r^2}\tag{6}\end{equation}
+				\begin{equation}E=\frac{3Q}{4\pi\epsilon_0 r^2},~a&lt;r&lt;b\tag{7}\end{equation}
+			</p>
+			<p>
+				That is the electric field in region \(II\).
+			</p>
+			<p>
+				Let's calculate the electric field in region \(III\).
+				An important principle to remember
+				is that the electric field inside a conductor is always zero.
+				So we don't even need to touch Guass's law at the moment in this region.
+			</p>
+			<p>
+				\begin{equation}\oint\vec{E}\cdot d\vec{A}=\frac{q_{enc}}{\epsilon_0}\tag{8}\end{equation}
+				\begin{equation}E=0,~b&lt;r&lt;c\tag{9}\end{equation}
+			</p>
+			<p>
+				Now let's calculate the electric field in the final region, region \(IV\).
+				The charge enclosed,
+				is the sum of the charges in both the sphere and the sperical shell.
+				So \(q_{enc}=3Q-2Q=Q\).
+				Let's use Gauss's law in region \(IV\).
+			</p>
+			<p>
+				\begin{equation}\oint\vec{E}\cdot d\vec{A}=\frac{q_{enc}}{\epsilon_0}\tag{10}\end{equation}
+				\begin{equation}E4\pi r^2=\frac{Q}{\epsilon_0}\tag{11}\end{equation}
+				\begin{equation}E=\frac{Q}{4\pi\epsilon_0 r^2},~c&lt;r\tag{12}\end{equation}
+			</p>
+			<p>
+				Now our final task is to determine the charge distribution on the outer shell in electrostatic equilibrium.
+				From earlier we know that the electric field in the inside of the shell is zero.
+				Gauss's law says that that the electric field within a surface
+				is proportional to the charge enclosed by the surface.
+				If the electric field at a radius inside the spherical shell is zero,
+				that must mean that the charge enclosed is zero.
+				We know that there is \(3Q\) of charge on the inner sphere.
+				We also know that the charge on a conductor resides entirely on the surfaces.
+				The charge on the outer shell may reside on its outer surface and its inner surface.
+				Its inner surface has a radius of \(b\), in our chosen spherical coordinate system.
+				Let's call the charge on the inner surface, \(Q_b\).
+				Then we can make the following statements.
+			</p>
+			<p>
+				\begin{equation}q_{enc}=0=3Q+Q_b\tag{13}\end{equation}
+				\begin{equation}Q_{b}=-3Q\tag{14}\end{equation}
+			</p>
+			<p>
+				We know that the total charge on the outer spherical shell is \(-2Q\).
+				we also know that the charge on its inner surface is \(-3Q\).
+				The charge on its inner surface, \(Q_{b}\), must be the difference between
+				its total charge, \(Q_{shell}\), and the charge on it's outer surface, \(Q_{c}\).
+			</p>
+			<p>
+				\begin{equation}Q_c=Q_{shell}-Q_{b}\tag{15}\end{equation}
+				\begin{equation}Q_C=-2Q-3Q=Q\tag{16}\end{equation}
+			</p>
+			<p>
+				So the charge on the outside of the spherical shell is \(Q\).
+				The charge distribution on the outer shell is \(-3Q\) on the inner surface
+				and \(Q\) on the outer surface.
+				This adds up to a total charge of \(-2Q\) on the outer shell
+				which is consistent with an inner charge of \(-3Q\) and an outer charge of \(Q\).
+				So we have answered the question of what is the charge distribution on the shell
+				when the system is in electrostatic equilibrium.
+				There is a \(-3Q\) charge on the inner surface at \(r=b\)
+				and there is \(Q\) charge on the outer surface at \(r=c\).
+			</p>
+		</article>
+	</main>
+	<footer>
+		Copyright © 2021 Matthew Cooper
+	</footer>
+</body>
+</html>

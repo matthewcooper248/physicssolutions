@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>circuit analysis</title>
+	<link rel="icon" href="../favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="../style.css">
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js">
+  </script>
+  <!-- the below three lines are a fix to get HTML5 semantic elements working in old versions of Internet Explorer-->
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+	<h1>solutions</h1>
+	<p>for common problems in introductory physics</p>
+	<main>
+		<aside>
+			<a href="../index.html">
+				home
+			</a>
+			<a href="01-inclined-plane.html">
+				inclined plane
+			</a>
+			<a href="02-pendulum.html">
+				pendulum
+			</a>
+			<a href="03-gausss-law.html">
+				gauss's law
+			</a>
+			<a href="04-circuit-analysis.html" class="highlighted">
+				circuit analysis
+			</a>
+			<a href="05-two-lenses.html">
+				two lenses
+			</a>
+		</aside>		
+		<article>
+			<h2>
+				circuit analysis
+			</h2>
+			<h3>
+				problem
+			</h3>
+			<p>
+				In the circuit below, determine the magnitude and direction of the three currents that are labeled.
+			</p>
+			<figure>
+				<img
+					src="../images/circuit-setup.svg"
+					alt="a circuit with 2 DC voltage sources and 3 resistors"
+					title="a circuit with 2 DC voltage sources and 3 resistors"
+				>
+			</figure>
+			<h3 id="solution">
+				solution
+			</h3>
+			<p>
+				The two main principles that you'll need to use to solve this problem are
+				Ohm's law and Kirchhoff's loop rule.
+				Ohm's law is given by the following equation.
+			</p>
+			<p>
+				\begin{equation}V=IR\tag{1}\end{equation}
+			</p>
+			<p>
+				\(V\) is the voltage across a circuit element with a resistance \(R\).
+				\(I\) is the current in that section of the circuit.
+			</p>
+			<p>
+				Kirchhoff's loop rule states that the voltage across any closed loop is zero.
+			</p>
+			<p>
+				In the diagram above, the direction of the currents is shown for you.
+				However, those may not actually be the correct directions for the flows of currents.
+				That's okay for now, though.
+				We will assume these are the correct directions and calculate the magnitudes of the current.
+				If we get a negative answer for the magnitude of the current
+				then we know the current actually goes in the opposite direction of what is shown in the above diagram.
+				We see that \(I_1\) and \(I_2\) combine to form \(I_3\) at point \(III\).
+				We can state the following.
+			</p>
+			<p>
+				\begin{equation}I_1+I_2=I_3\tag{2}\end{equation}
+			</p>
+			<p>
+				Next, we will apply Kirchoff's loop rule and utilize Ohm's law along the way.
+				We are going to add up all the voltages in a loop that goes from
+				point \(I\), to point \(II\), to point \(III\), to point \(IV\), and back to point \(I\).
+				The sum of all the voltages should be zero.
+				From point \(I\) to point \(II\), the voltage doesn't change.
+				From point \(II\) to point \(III\), the voltage increases by \(\mathrm{5V}\),
+				then decreases by \(\left(3~\mathrm{\Omega}\right)I_1\) according to Ohm's law.
+				From point \(III\) to point \(IV\), the voltage doesn't change.
+				Finally from point \(IV\) to point \(I\),
+				the voltage decreases by \(\left(1~\mathrm{\Omega}\right)I_3\).
+				We can state the following.
+			</p>
+			<p>
+				\begin{equation}5~\mathrm{V}-\left(3~\mathrm{\Omega}\right)I_1-\left(1~\mathrm{\Omega}\right)I_3=0\tag{3}\end{equation}
+			</p>
+			<p>
+				Let's do the same thing for the loop
+				from point \(II\), to point \(V\), to point \(VI\), to point \(III\), and back to point \(II\).
+				From point \(II\) to point \(V\), the voltage drops by \(\left(2~\mathrm{\Omega}\right)I_2\).
+				From point \(V\) to point \(VI\), the voltage decreases by \(7~\mathrm{V}\).
+				It decreases instead of increasing across the voltage source
+				because the direction of the current on our diagram is going from the positive end to the negative end.
+				When the current is flowing from the negative end to the positve end then the voltage would increase.
+				From point \(VI\) to point \(III\), the voltage doesn't change.
+				From point \(III\) to point \(II\),
+				the voltage increases by \(\left(3~\Omega\right)I_1\) and decreases by \(5~\mathrm{V}\).
+				The signs of these two potential differences is opposite of what it normally would be
+				because the loop we are following is opposite the direction of the current in this
+				section of the circuit.
+				We get the following when we sum all of this together.
+			</p>
+			<p>
+				\begin{equation}-(2~\mathrm{\Omega})I_2-7~\mathrm{V}+\left(3~\mathrm{\Omega}\right)I_1-5~\mathrm{V}=0\tag{4}\end{equation}
+			</p>
+			<p>
+				We now have three equations—equations 2, 3, and 4—with three unknowns—\(I_1\), \(I_2\), and \(I_3\)—that we can solve for. 
+				First let's plug equation 2 into equation 3.
+			</p>
+			<p>
+				\begin{equation}5~\mathrm{V}-\left(3~\mathrm{\Omega}\right)I_1-\left(1~\mathrm{\Omega}\right)\left(I_1+I_2\right)=0\tag{5}\end{equation}
+			</p>
+			<p>
+				Let's rearrange equation 5 and equation 4 to look like the following.
+			</p>
+			<p>
+				\begin{equation}-\left(4~\mathrm{\Omega}\right)I_1-\left(1~\Omega\right)I_2+5~\mathrm{V}=0\tag{6}\end{equation}
+				\begin{equation}\left(3~\mathrm{\Omega}\right)I_1-\left(2~\mathrm{\Omega}\right)I_2-12~\mathrm{V}=0\tag{7}\end{equation}
+			</p>
+			<p>
+				Multiply both sides of equation 6 by 2.
+			</p>
+			<p>
+				\begin{equation}-\left(8~\mathrm{\Omega}\right)I_1-\left(2~\Omega\right)I_2+10~\mathrm{V}=0\tag{6}\end{equation}
+				\begin{equation}\left(3~\mathrm{\Omega}\right)I_1-\left(2~\mathrm{\Omega}\right)I_2-12~\mathrm{V}=0\tag{7}\end{equation}
+			</p>
+			<p>
+				Subtract equation 7 from equation 6 and then solve for \(I_1\).
+			</p>
+			<p>
+				\begin{equation}-\left(11~\mathrm{\Omega}\right)I_1+22~\mathrm{V}=0\tag{8}\end{equation}
+				\begin{equation}I_1=2~\mathrm{A}\tag{9}\end{equation}
+			</p>
+			<p>
+				We've determined one of our three currents that we need to calculate.
+				Note that \(1~\mathrm{V}/\mathrm{\Omega}\) is equal to \(1~\mathrm{A}\).
+				An \(\mathrm{A}\) is an ampere, the unit for current.
+				Next plug equation 9 into equation 3, and solve for \(I_2\).
+			</p>
+			<p>
+				\begin{equation}5~\mathrm{V}-\left(3~\Omega\right)\left(2~\mathrm{A}\right)-\left(1~\Omega\right)I_3=0\tag{10}\end{equation}
+				\begin{equation}I_3=-1~\mathrm{A}\tag{11}\end{equation}
+			</p>
+			<p>
+				Now we know what \(I_3\) is. The value we got is negative so we know that the real direction of
+				\(I_3\) is opposite to what is shown in the above diagram.
+				Lastly, let's plug equations 9 and 11 into equation 2 and solve for \(I_2\).
+			</p>
+			<p>
+				\begin{equation}2~\mathrm{A}+I_2=-1~\mathrm{A}\tag{12}\end{equation}
+				\begin{equation}I_2=-3~\mathrm{A}\tag{13}\end{equation}
+			</p>
+			<p>
+				Let's redraw the diagram of the circuit to indicate the correct direction of the currents.
+			</p>
+			<figure>
+				<img
+					src="../images/circuit-solution.svg"
+					alt="a circuit with 2 DC voltage sources and 3 resistors"
+					title="a circuit with 2 DC voltage sources and 3 resistors"
+				>
+			</figure>
+		</article>
+	</main>
+	<footer>
+		Copyright © 2021 Matthew Cooper
+	</footer>
+</body>
+</html>

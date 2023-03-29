@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>circuit analysis</title>
+	<link rel="icon" href="../favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="../style.css">
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js">
+  </script>
+  <!-- the below three lines are a fix to get HTML5 semantic elements working in old versions of Internet Explorer-->
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+	<h1>solutions</h1>
+	<p>for common problems in introductory physics</p>
+	<main>
+		<aside>
+			<a href="../index.html">
+				home
+			</a>
+			<a href="01-inclined-plane.html">
+				inclined plane
+			</a>
+			<a href="02-pendulum.html">
+				pendulum
+			</a>
+			<a href="03-gausss-law.html">
+				gauss's law
+			</a>
+			<a href="04-circuit-analysis.html">
+				circuit analysis
+			</a>
+			<a href="05-two-lenses.html" class="highlighted">
+				two lenses
+			</a>
+		</aside>		
+		<article>
+			<h2>
+				two lenses
+			</h2>
+			<h3>
+				problem
+			</h3>
+			<p>
+				There are two focusing lenses on axis as depicted in the figure below.
+				An object is \(30.0~\mathrm{cm}\) behind the first lens which has a focusing length of \(20.0~\mathrm{cm}\).
+				The distance between the two lenses is \(40.0~\mathrm{cm}\).
+				Determine the location of the image after the two lenses and the total magnification after the two lenses.
+			</p>
+			<br>
+			<figure>
+				<img
+					src="../images/two-lenses-setup.svg"
+					alt="a lens with a focal length of 20.0 cm and a lens with a focal length of 40.0 cm"
+					title="a lens with a focal length of 20.0 cm and a lens with a focal length of 40.0 cm"
+				>
+			</figure>
+			<br>
+			<h3 id="solution">
+				solution
+			</h3>
+			<p>
+				The lens equation is given by the following.
+			</p>
+			<p>
+				\begin{equation}\frac{1}{f}=\frac{1}{d_0}+\frac{1}{d_i}\tag{1}\end{equation}	
+			</p>
+			<p>
+				For the first lens, we will add a 1 subscript to each element.
+			</p>
+			<p>
+				\begin{equation}\frac{1}{f_1}=\frac{1}{d_{01}}+\frac{1}{d_{i1}}\tag{2}\end{equation}	
+			</p>
+			<p>
+				Now let's plug in the values from the explanation of the problem.
+			</p>
+			<p>
+				\begin{equation}\frac{1}{20.0~\mathrm{cm}}=\frac{1}{\mathrm{30.0~\mathrm{cm}}}+\frac{1}{d_{i1}}\tag{3}\end{equation}
+				\begin{equation}\frac{1}{d_{i1}}=\frac{1}{20.0~mc}-\frac{1}{30.0~cm}\tag{4}\end{equation}
+				\begin{equation}d_{i1}=\left[\frac{1}{20.0~\mathrm{cm}}-\frac{1}{30.0~\mathrm{cm}}\right]^{-1}\tag{5}\end{equation}
+				\begin{equation}d_{i1}=60.0~\mathrm{cm}\tag{6}\end{equation}
+			</p>
+			<figure>
+				<img
+					src="../images/two-lenses-solution-01.svg"
+					alt="a circuit with 2 DC voltage sources and 3 resistors"
+					title="a circuit with 2 DC voltage sources and 3 resistors"
+				>
+			</figure>
+			<p>
+				The image, \(d_{01}\), is \(60~\mathrm{cm}\) to the right of the first lens.
+				That means that the image from the first lens is \(20~\mathrm{cm}\) to the right
+				of the second lens since the sencod lens is the \(40~\mathrm{cm}\) to the right
+				of the first lens.
+				Now let's apply the lens equation to the second lens.
+				The distance of the new object from the second lens is now \(-20~\mathrm{cm}\).
+				We get the following.
+			</p>
+			<p>
+				\begin{equation}\frac{1}{f_2}=\frac{1}{d_{02}}+\frac{1}{d_{i2}}\tag{7}\end{equation}
+				\begin{equation}\frac{1}{40.0~\mathrm{cm}}=\frac{1}{-20.0~\mathrm{cm}}+\frac{1}{d_{i2}}\tag{8}\end{equation}
+				\begin{equation}\frac{1}{d_{i2}}=\frac{1}{40.0~\mathrm{cm}}+\frac{1}{20.0~\mathrm{cm}}\tag{9}\end{equation}
+				\begin{equation}d_{i2}=\left[\frac{1}{40.0~cm}+\frac{1}{20.0~\mathrm{cm}}\right]^{-1}\tag{10}\end{equation}
+				\begin{equation}d_{i2}=13.3~\mathrm{cm}\tag{11}\end{equation}
+			</p>
+			<p>
+				So the image of the object after the second lens is \(13.3~\mathrm{cm}\) to the right of the second lens.
+				We have determined the location of the image after the two lenses.
+				Now let's determine the magnification of the image after the two lenses.
+				The general equation for magnification, \(M\), is the following.
+			</p>
+			<p>
+				\begin{equation}M=-\frac{d_i}{d_0}\tag{12}\end{equation}
+			</p>
+			<p>
+				\(d_i\) is the distance of the image from the lens and \(d_0\) is the distance of the object from the lens.
+				The magnification from the first lens is the following.
+			</p>
+			<p>
+				\begin{equation}M_1=-\frac{d_{i1}}{d_{01}}\tag{13}\end{equation}
+			</p>
+			<p>
+				The magnification due to the second lens is the following.	
+			</p>
+			<p>
+				\begin{equation}M_2=-\frac{d_{i2}}{d_{02}}\tag{14}\end{equation}
+			</p>
+			<p>
+				The total magnification after both lenses is given by the following.
+			</p>
+			<p>
+				\begin{equation}M=M_1M_2\tag{15}\end{equation}
+			</p>
+			<p>
+				This becomes the following.
+			</p>
+			<p>
+				\begin{equation}M=\frac{d_{i1}}{d_{01}}\frac{d_{i2}}{d_{02}}\tag{16}\end{equation}
+			</p>
+			<p>
+				The magnification in our situation is the following.
+			</p>
+			<p>
+				\begin{equation}M=\frac{60.0~\mathrm{cm}}{30.0~\mathrm{cm}}\frac{13.3~\mathrm{cm}}{-20.0~\mathrm{cm}}\tag{17}\end{equation}
+				\begin{equation}M=-1.33\tag{18}\end{equation}
+			</p>
+			<p>
+				The image of the final object should look like the following.
+			</p>
+			<figure>
+				<img
+					src="../images/two-lenses-solution-02.svg"
+					alt="a circuit with 2 DC voltage sources and 3 resistors"
+					title="a circuit with 2 DC voltage sources and 3 resistors"
+				>
+			</figure>
+		</article>
+	</main>
+	<footer>
+		Copyright © 2021 Matthew Cooper
+	</footer>
+</body>
+</html>

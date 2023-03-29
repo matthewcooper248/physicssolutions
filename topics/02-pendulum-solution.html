@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>pendulum</title>
+	<link rel="icon" href="../favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="../style.css">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js">
+  </script>
+  <!-- the below three lines are a fix to get HTML5 semantic elements working in old versions of Internet Explorer-->
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+	<h1>solutions</h1>
+	<p>for common problems in introductory physics</p>
+	<main>
+		<aside>
+			<a href="../index.html">
+				home
+			</a>
+			<a href="01-inclined-plane.html">
+				inclined plane
+			</a>
+			<a href="02-pendulum.html" class="highlighted">
+				pendulum
+			</a>
+			<a href="03-gausss-law.html">
+				gauss's law
+			</a>
+			<a href="04-circuit-analysis.html">
+				circuit analysis
+			</a>
+			<a href="05-two-lenses.html">
+				two lenses
+			</a>
+		</aside>		
+		<article>
+			<h2>
+				pendulum
+			</h2>
+			<h3>
+				problem
+			</h3>
+			<p>
+				A ball of mass \(m\) is attached to a massless, dimensionless string of length \(L\)
+				that is attached to the ceiling.
+				The ball is held back so that the string makes an angle of \(\theta\) with the vertical
+				and then it is released.
+				What is the speed of the ball and the tension in the string when the ball reaches the lowest
+				point of its swing?				
+			</p>
+			<figure>
+				<img
+					src="../images/pendulum-setup.svg"
+					alt="a pendulum is formed by a ball attached to a string attached to the ceiling"
+					title="a pendulum is formed by a ball attached to a string attached to the ceiling"
+				>
+			</figure>
+			<h3 id="solution">
+				solution
+			</h3>
+			<p>
+				First, we will calculate the speed of the ball when it reaches the lowest point of its motion.
+				We will use conservation of energy to do this.
+				The total energy of the ball right after it is released with the pendulum at an angle \(\theta\)
+				should be equal to the total energy of the ball when it is at the lowest point of its motion.
+				We will call the former \(E_i\) and the latter \(E_f\).
+			</p>
+			<p>
+				\begin{equation}E_i=E_f\tag{1}\end{equation}
+			</p>
+			<p>
+				In this problem, the energy only takes two forms.
+				The ball has gravitational potential energy, \(U\), and kinetic energy of motion, \(T\).
+				We will use the subscripts \(i\) and \(f\) on these as well to denote their initial and final quantities.
+			</p>
+			<p>
+				\begin{equation}U_i+T_i=U_f+T_f\tag{2}\end{equation}
+			</p>
+			<p>
+				The kinetic energy is determined by the mass, \(m\), and speed, \(v\), according to
+			</p>
+			<p>
+				\begin{equation}T=\frac{1}{2}mv^2\tag{3}\end{equation}
+			</p>
+			<p>
+				Gravitational potential energy is determined by
+			</p>
+			<p>
+				\begin{equation}U=mgh\tag{4}\end{equation}
+			</p>
+			<p>
+				where \(m\) is the mass of the object, \(g\) is the acceleration due to gravity,
+				and \(h\) is the displacement of the object from the point of zero potential energy.
+			</p>
+			<p>
+				We can rewrite equation 2 like so.
+			</p>
+			<p>
+				\begin{equation}mgh_i+\frac{1}{2}mv_i^2=mgh_f+\frac{1}{2}mv_f^2\tag{5}\end{equation}
+			</p>
+			<p>
+				The gravitational potential energy is defined relative to a vertical reference point of your choosing.
+				We can simplify our work by setting the reference point at the vertical location of either the initial or final location of the ball.
+				Let's set the point of zero gravitational potential energy to be the vertical location of the ball's initial position.
+				That means \(h_i=0\).
+				Also, the ball is instantaneously at rest when it is released so \(v_i=0\).
+			<p>
+				We need to determine the vertical displacement of the ball from its initial position
+				when it is at the bottom of its motion.
+			</p>
+			<p>
+				Take a look at these additions to the diagram of our setup and then we will discuss it.
+			</p>
+			<figure>
+				<img
+					src="../images/pendulum-trig.svg"
+					alt="trigonometry is used to determine the vertical drop of the bob of a swinging pendulum"
+					title="trigonometry is used to determine the vertical drop of the bob of a swinging pendulum"
+				>
+			</figure>
+			<p>
+				When the ball is at its lowest point, the distance between the ball and the ceiling
+				is just the length of the string, \(L\).
+				What was the original distance of the ball from the ceiling when it was pulled back at an angle \(\theta\)?
+				It is the projection of the length of the string \(L\) at an angle \(\theta\)
+				on to the vertical, which is \(L\mathrm{cos}\theta\).
+				Then the vertical distance between the balls original position and its position at the bottom of its motion
+				is the ball's original vertical drop subtracted from the length of the string, \(L-L\mathrm{cos}\theta\).
+				This is the change in height that we need to plug in so \(h_f=-\left(L-L\mathrm{cos}\theta\right)\).
+				I put a minus sign in front of the length we calculated because this is a displacement
+				from a higher gravitational potential energy to a lower one.
+				We are trying to find the final velocity so let's just call it \(v\) and let \(v_f=v\).
+				Now we can rewrite equation 5 as
+			</p>
+			<p>
+				\begin{equation}mg(0)+\frac{1}{2}m(0)^2=mg\left[-\left(L-L\mathrm{cos}\theta\right)\right]+\frac{1}{2}mv^2\tag{6}\end{equation}
+			</p>
+			<p>
+				Now we can do some algebra to isolate, \(v\).
+			</p>
+			<p>
+				\begin{equation}\frac{1}{2}mv^2=mgL\left(1-\mathrm{cos}\theta\right)\tag{7}\end{equation}
+				\begin{equation}v^2=2gL\left(1-\mathrm{cos}\theta\right)\tag{8}\end{equation}
+				\begin{equation}v=\sqrt{2gL\left(1-\mathrm{cos}\theta\right)}\tag{9}\end{equation}
+			</p>
+			<p>
+				Next let's determine the tension, \(T\), in the string when the ball is at its lowest point.
+				If we look at our earlier diagram, we see that there are only two forces acting on the ball,
+				\(T\) and \(mg\).
+				We need to use Newton's second law.
+			</p>
+			<p>
+				\begin{equation}\Sigma F=ma\tag{10}\end{equation}
+			</p>
+			<p>
+				T is in the vertical direction so we only need to sum the force in the vertical direction.
+				But a mass swinging as a pendulum is actually circular motion.
+				When the ball is at its lowest point,
+				the vertical direction is the radial direction.
+				So we will sum the forces in the radial direction.
+				Pointing towards the pivot point will be the positive direction.
+				Is there any acceleration in the radial direction?
+				Yes. The acceleration inward in the radial direction depends on the tangential speed, \(v\), of the ball
+				which we have conveniently just calculated.
+				It also depends on the distance from the center of the circular motion, \(r\).
+				Here is the equation.
+			</p>
+			<p>
+				\begin{equation}a=\frac{v^2}{r}\tag{11}\end{equation}
+			</p>
+			<p>
+				Let's use these pieces of information in Newton's second law
+				and see if we can determine, \(T\), in terms of our unknowns.
+			</p>
+			<p>
+				\begin{equation}\Sigma F=ma\tag{12}\end{equation}
+				\begin{equation}T-mg=m\frac{v^2}{L}\tag{13}\end{equation}
+				\begin{equation}T=mg+m\frac{v^2}{L}\tag{14}\end{equation}
+				\begin{equation}T=mg+\frac{m}{L}\left[\sqrt{2gL\left(1-\mathrm{cos}\theta\right)}\right]^2\tag{15}\end{equation}
+				\begin{equation}T=mg+2mg\left(1-\mathrm{cos}\theta\right)\tag{16}\end{equation}
+				\begin{equation}T=mg\left(3-2\mathrm{cos}\theta\right)\tag{17}\end{equation}
+			</p>
+			<p>
+				And that is the tension in the string.
+			</p>
+		</article>
+	</main>
+	<footer>
+		Copyright © 2021 Matthew Cooper
+	</footer>
+</body>
+</html>
